@@ -4,6 +4,22 @@
 
 ---
 
+# 2026-04-27 — ZSTD silesia 固定语料复测（修订上一节结论）
+
+承接下面 cross-server 对比中"text.bin 不可比"的 caveat，这次换成业界标准 silesia 语料（打乱后做成 211 MB 的 `silesia_shuf.tar`，两机使用同一份 sha256 校验文件 `ebfcba3c…`），让 ratio 真正可比。
+
+关键发现（修订之前的结论）：
+
+- **Ratio 终于一致**：两机 L22 ratio 4.042 vs 4.041，证明 zstd 1.5.5 / 1.5.1 在压缩比上等价。
+- **L19 单核压缩 6979P 快 ~21%**（4.33 vs 3.58 MB/s）。上一轮 "两机几乎一致 ~5.2 MB/s" 是 text.bin 重复结构造成的 artifact。
+- **L19 单核解压 9965 只快 ~8%**（1362 vs 1260 MB/s），远不像上一轮 text.bin 显示的 37%。上一轮 1.4× ~ 4× 的大差距来自 random / zeros / 重复文本这些极端 cache-friendly 场景。
+- **L19 多线程 T=8 即饱和** (~15 MB/s)，远低于 1 GiB text.bin 的 T=32 / 100 MB/s — 因为 211 MB 在 8 MB 窗口下只剩 ~26 块。多线程上限受**输入大小**决定，硬件占比小。
+- 综合：silesia 这类真实数据上 **6979P 略占优**（高 level 压缩快约 20%，解压略慢 ~7%）。EPYC 9965 在极端 cache-friendly 场景仍有压倒性优势，但这类场景在生产中不常见。
+
+详见 `comparison/2026-04-27-zstd-silesia/README.md`。
+
+---
+
 # 2026-04-27 — ZSTD 跨服务器对比 (9965 vs 6979P)
 
 在第二台服务器 `6979P (10.239.23.11)` 上跑了和昨天 (105) 同一套 zstd matrix，做横向对比。
