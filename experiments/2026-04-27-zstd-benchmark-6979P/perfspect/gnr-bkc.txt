@@ -1,0 +1,678 @@
+System Summary
+==============
+Host Name:                     gnr-bkc
+Time:                          Mon Apr 27 10:46:20 AM EDT 2026
+System:                        Intel Corporation AvenueCity, ....................
+Baseboard:                     Intel Corporation AvenueCity, 0.02
+Chassis:                       Intel Corporation Rack Mount Chassis, ............
+CPU Model:                     Intel(R) Xeon(R) 6979P
+Architecture:                  x86_64
+Microarchitecture:             GNR_X3
+L3 Cache (instance/total):     504M/1008M
+Cores per Socket:              120
+Sockets:                       2
+Hyperthreading:                Enabled
+CPUs:                          480
+Intel Turbo Boost:             Enabled
+Base Frequency:                2.1GHz
+Maximum Frequency:             3.9GHz
+All-core Maximum Frequency:    3.2GHz
+NUMA Nodes:                    6
+Prefetchers:                   L2 HW: Enabled, L2 Adj: Enabled, DCU HW: Enabled, DCU IP: Enabled, DCU NP: Enabled, AMP: Enabled, LLCPP: Enabled, AOP: Enabled, Homeless: Enabled, LLC: Disabled
+PPINs:                         6917bb5cfd5b7f93, 6922bf5c3d0adb11
+Accelerators Available [used]: DLB 8 [0], DSA 8 [0], IAA 8 [0], QAT 8 [0], vRAN Boost 0 [0]
+Installed Memory:              768GB (24x32GB DDR5 6400MT/s [6400MT/s])
+Hugepagesize:                  2048 kB
+Transparent Huge Pages:        always
+Automatic NUMA Balancing:      Disabled
+NIC:                           1x I210 Gigabit Network Connection
+Disk:                          1x 7T SAMSUNG MZWLR7T6HALA-00007, 1x 1.7T Micron_7450_MTFDKBG1T9TFR
+BIOS:                          BHSDCRB1.IPC.3545.O24.2602012206
+Microcode:                     0x81000423
+OS:                            CentOS Stream 9
+Kernel:                        6.6.0-gnr.bkc.6.6.37.1.51.x86_64
+TDP:                           500W
+Energy Performance Bias:       Performance (0)
+Energy Performance Preference: Performance (0)
+Scaling Governor:              performance
+Scaling Driver:                intel_pstate
+C-states:                      POLL: Enabled, C1: Enabled, C1E: Enabled, C6: Disabled, C6P: Enabled
+Efficiency Latency Control:    Latency Optimized Mode (LOM)
+CVEs:                          32 OK, 0 Vulnerable
+System Summary:                1-node, Intel Corporation AvenueCity, 2x Intel(R) Xeon(R) 6979P, 120 cores, 500W TDP, HT On, Turbo On, Total Memory 768GB (24x32GB DDR5 6400MT/s [6400MT/s]), BIOS BHSDCRB1.IPC.3545.O24.2602012206, microcode 0x81000423, 1x I210 Gigabit Network Connection, 1x 7T SAMSUNG MZWLR7T6HALA-00007, 1x 1.7T Micron_7450_MTFDKBG1T9TFR, CentOS Stream 9, 6.6.0-gnr.bkc.6.6.37.1.51.x86_64. Test by Intel as of April 27 2026.
+
+Host
+====
+Host Name: gnr-bkc
+Time:      Mon Apr 27 10:46:20 AM EDT 2026
+System:    Intel Corporation AvenueCity, ....................
+Baseboard: Intel Corporation AvenueCity, 0.02
+Chassis:   Intel Corporation Rack Mount Chassis, ............
+
+BIOS
+====
+Vendor:       Intel Corporation
+Version:      BHSDCRB1.IPC.3545.O24.2602012206
+Release Date: 02/01/2026
+
+Operating System
+================
+OS:              CentOS Stream 9
+Kernel:          6.6.0-gnr.bkc.6.6.37.1.51.x86_64
+Boot Parameters: BOOT_IMAGE=(hd1,gpt2)/vmlinuz-6.6.0-gnr.bkc.6.6.37.1.51.x86_64 root=/dev/mapper/cs_sh14l47002s1203-root ro crashkernel=1G-4G:192M,4G-64G:256M,64G-:512M resume=/dev/mapper/cs_sh14l47002s1203-swap rd.lvm.lv=cs_sh14l47002s1203/root rd.lvm.lv=cs_sh14l47002s1203/swap rhgb quiet selinux=0 console=tty0 console=ttyS0,115200n8 earlyprintk=ttyS0,115200 intel_iommu=on,sm_on numa_balancing=disable tsc=recalibrate tdxio
+Microcode:       0x81000423
+
+Software Version
+================
+GCC:      gcc (GCC) 11.4.1 20231218 (Red Hat 11.4.1-3)
+GLIBC:    ldd (GNU libc) 2.34
+Binutils: GNU ld version 2.35.2-42.el9
+Python:   Python 3.9.18
+Python3:  Python 3.9.18
+Java:     openjdk version "1.8.0_362"
+OpenSSL:  OpenSSL 3.0.7 1 Nov 2022 (Library: OpenSSL 3.0.7 1 Nov 2022)
+
+CPU
+===
+CPU Model:                  Intel(R) Xeon(R) 6979P
+Architecture:               x86_64
+Microarchitecture:          GNR_X3
+Family:                     6
+Model:                      173
+Stepping:                   1
+Base Frequency:             2.1GHz
+Maximum Frequency:          3.9GHz
+All-core Maximum Frequency: 3.2GHz
+CPUs:                       480
+On-line CPU List:           0-479
+Hyperthreading:             Enabled
+Cores per Socket:           120
+Sockets:                    2
+NUMA Nodes:                 6
+NUMA CPU List:              0-39,240-279 :: 40-79,280-319 :: 80-119,320-359 :: 120-159,360-399 :: 160-199,400-439 :: 200-239,440-479
+L1d Cache:                  48K
+L1i Cache:                  64K
+L2 Cache:                   2M
+L3 Cache (instance/total):  504M/1008M
+L3 per Core:                4.2M
+Memory Channels:            12
+Intel Turbo Boost:          Enabled
+Virtualization:             VT-x
+PPINs:                      6917bb5cfd5b7f93, 6922bf5c3d0adb11
+
+Prefetcher
+==========
+Prefetcher   Description                                                                                                                                                  MSR      Bit   Status
+----------   -----------                                                                                                                                                  ---      ---   ------
+L2 HW        L2 Hardware (MLC Streamer) fetches additional lines of code or data into the L2 cache.                                                                       0x01A4   0     Enabled
+L2 Adj       L2 Adjacent Cache Line (MLC Spatial) fetches the cache line that comprises a cache line pair.                                                                0x01A4   1     Enabled
+DCU HW       DCU Hardware (DCU Streamer) fetches the next cache line into the L1 cache.                                                                                   0x01A4   2     Enabled
+DCU IP       DCU Instruction Pointer prefetcher uses sequential load history to determine the cache lines to prefetch.                                                    0x01A4   3     Enabled
+DCU NP       DCU Next Page is an L1 data cache prefetcher.                                                                                                                0x01A4   4     Enabled
+AMP          Adaptive Multipath Probability (MLC AMP) predicts access patterns based on previous patterns and fetches the corresponding cache lines into the L2 cache.    0x01A4   5     Enabled
+LLCPP        Last Level Cache Page (MLC LLC Page) Prefetcher                                                                                                              0x01A4   6     Enabled
+AOP          L2 Array of Pointers (DCU AOP) Prefetcher                                                                                                                    0x01A4   7     Enabled
+Homeless     Homeless prefetch allows early fetch of the demand miss into the MLC when we don't have enough resources to track this demand in the L1 cache.               0x006D   14    Enabled
+LLC          Last level cache gives the core prefetcher the ability to prefetch data directly into the LLC without necessarily filling into the L1 and L2 caches first.   0x006D   42    Disabled
+
+ISA
+===
+Advanced Encryption Standard New Instructions (AES-NI): Yes
+Advanced Matrix Extensions (AMX):                       Yes
+AMX-COMPLEX Instruction:                                No
+AMX-FP16 Instruction:                                   Yes
+AVX-IFMA Instruction:                                   No
+AVX-NE-CONVERT Instruction:                             No
+AVX-VNNI-INT8 Instruction:                              No
+AVX-512 Foundation:                                     Yes
+Vector Neural Network Instructions (AVX512_BF16):       Yes
+Advanced Vector Extensions (AVX512_FP16):               Yes
+Vector Neural Network Instructions (AVX512_VNNI):       Yes
+Cache Line Demote (CLDEMOTE):                           Yes
+Compare and Add if Condition is Met (CMPCCXADD):        No
+Enqueue Command Instruction (ENQCMD):                   Yes
+Move Doubleword as Direct Store (MOVDIRI):              Yes
+Move 64 Bytes as Direct Store (MOVDIR64B):              Yes
+PREFETCHIT0/1 Instruction:                              Yes
+SERIALIZE Instruction:                                  Yes
+SHA1/SHA256 Instruction Extensions (SHA_NI):            Yes
+Transactional Synchronization Extensions (TSXLDTRK):    Yes
+Vector AES:                                             Yes
+UMONITOR, UMWAIT, TPAUSE Instructions:                  Yes
+
+Accelerator
+===========
+Name               Count   Work Queues   Full Name                          Description
+----               -----   -----------   ---------                          -----------
+DLB                8       N/A           Intel Dynamic Load Balancer        hardware managed system of queues and arbiters connecting producers and consumers
+DSA                8       None          Intel Data Streaming Accelerator   a high-performance data copy and transformation accelerator
+IAA                8       None          Intel Analytics Accelerator        accelerates compression and decompression for big data applications and in-memory analytic databases
+QAT (on CPU)       8       N/A           Intel Quick Assist Technology      accelerates data encryption and compression for applications from networking to enterprise, cloud to storage, and content delivery to database
+QAT (on chipset)   0       N/A           Intel Quick Assist Technology      accelerates data encryption and compression for applications from networking to enterprise, cloud to storage, and content delivery to database
+vRAN Boost         0       N/A           Intel vRAN Boost                   accelerates vRAN workloads
+
+Power
+=====
+TDP:                           500W
+Energy Performance Bias:       Performance (0)
+Energy Performance Preference: Performance (0)
+Scaling Governor:              performance
+Scaling Driver:                intel_pstate
+
+C-state
+=======
+Name   Status
+----   ------
+POLL   Enabled
+C1     Enabled
+C1E    Enabled
+C6     Disabled
+C6P    Enabled
+
+Maximum Frequency
+=================
+Cores     Cores per Die   SSE   AVX2   AVX512   AVX512H   AMX
+-----     -------------   ---   ----   ------   -------   ---
+1-60      1-20            3.9   3.9    3.7      3.6       3.0
+61-72     21-24           3.8   3.6    3.4      3.3       2.7
+73-84     25-28           3.6   3.4    3.2      3.1       2.6
+85-90     29-30           3.5   3.3    3.1      3.0       2.5
+91-102    31-34           3.4   3.1    2.8      2.6       2.2
+103-108   35-36           3.3   3.1    2.8      2.6       2.1
+109-114   37-38           3.2   3.0    2.7      2.5       2.1
+115-120   39-40           3.2   3.0    2.7      2.5       2.1
+
+Speed Select Turbo Frequency - High Priority
+============================================
+No data found.
+
+Speed Select Turbo Frequency - Low Priority
+===========================================
+No data found.
+
+Uncore
+======
+Min Frequency (Compute): 0.8GHz
+Min Frequency (I/O):     0.8GHz
+Max Frequency (Compute): 2.2GHz
+Max Frequency (I/O):     2.5GHz
+CHA Count:               126
+
+Efficiency Latency Control
+==========================
+Socket   Instance   Die   Type      Min Ratio (MHz)   Max Ratio (MHz)   ELC Ratio (MHz)   ELC Low Threshold (%)   ELC High Threshold (%)   ELC High Threshold Enable   Mode
+------   --------   ---   ----      ---------------   ---------------   ---------------   ---------------------   ----------------------   -------------------------   ----
+0        0          4     IO        800               2500              0                 0                       0                        1                           Latency Optimized Mode (LOM)
+0        0          1     Compute   800               2200              0                 0                       0                        1                           Latency Optimized Mode (LOM)
+0        0          0     Compute   800               2200              0                 0                       0                        1                           Latency Optimized Mode (LOM)
+0        0          3     IO        800               2500              0                 0                       0                        1                           Latency Optimized Mode (LOM)
+0        0          2     Compute   800               2200              0                 0                       0                        1                           Latency Optimized Mode (LOM)
+1        1          0     Compute   800               2200              0                 0                       0                        1                           Latency Optimized Mode (LOM)
+1        1          1     Compute   800               2200              0                 0                       0                        1                           Latency Optimized Mode (LOM)
+1        1          2     Compute   800               2200              0                 0                       0                        1                           Latency Optimized Mode (LOM)
+1        1          3     IO        800               2500              0                 0                       0                        1                           Latency Optimized Mode (LOM)
+1        1          4     IO        800               2500              0                 0                       0                        1                           Latency Optimized Mode (LOM)
+
+Memory
+======
+Installed Memory:              768GB (24x32GB DDR5 6400MT/s [6400MT/s])
+MemTotal:                      791588116 kB
+MemFree:                       722494092 kB
+MemAvailable:                  782268552 kB
+Buffers:                       5152 kB
+Cached:                        63162712 kB
+HugePages_Total:               0
+Hugepagesize:                  2048 kB
+Transparent Huge Pages:        always
+Automatic NUMA Balancing:      Disabled
+Populated Memory Channels:     24
+Total Memory Encryption (TME): Disabled
+Clustering Mode:               SNC 3
+
+DIMM
+====
+Bank Locator   Locator       Manufacturer   Part                  Serial     Size    Type   Detail                              Speed       Rank   Configured Speed   Socket   Channel   Slot
+------------   -------       ------------   ----                  ------     ----    ----   ------                              -----       ----   ----------------   ------   -------   ----
+BANK 0         CPU0_DIMM_A   Micron         MTC20F2085S1RC64BDY   423AC8E6   32 GB   DDR5   Synchronous Registered (Buffered)   6400 MT/s   2      6400 MT/s          0        0         0  
+BANK 1         CPU0_DIMM_B   Micron         MTC20F2085S1RC64BDY   423AB9F5   32 GB   DDR5   Synchronous Registered (Buffered)   6400 MT/s   2      6400 MT/s          0        1         0  
+BANK 2         CPU0_DIMM_C   Micron         MTC20F2085S1RC64BDY   423AD025   32 GB   DDR5   Synchronous Registered (Buffered)   6400 MT/s   2      6400 MT/s          0        2         0  
+BANK 3         CPU0_DIMM_D   Micron         MTC20F2085S1RC64BDY   423ADBEC   32 GB   DDR5   Synchronous Registered (Buffered)   6400 MT/s   2      6400 MT/s          0        3         0  
+BANK 4         CPU0_DIMM_E   Micron         MTC20F2085S1RC64BDY   423ACE40   32 GB   DDR5   Synchronous Registered (Buffered)   6400 MT/s   2      6400 MT/s          0        4         0  
+BANK 5         CPU0_DIMM_F   Micron         MTC20F2085S1RC64BDY   423AD112   32 GB   DDR5   Synchronous Registered (Buffered)   6400 MT/s   2      6400 MT/s          0        5         0  
+BANK 6         CPU0_DIMM_G   Micron         MTC20F2085S1RC64BDY   42415DBC   32 GB   DDR5   Synchronous Registered (Buffered)   6400 MT/s   2      6400 MT/s          0        6         0  
+BANK 7         CPU0_DIMM_H   Micron         MTC20F2085S1RC64BDY   42412DF2   32 GB   DDR5   Synchronous Registered (Buffered)   6400 MT/s   2      6400 MT/s          0        7         0  
+BANK 8         CPU0_DIMM_I   Micron         MTC20F2085S1RC64BDY   42415D8A   32 GB   DDR5   Synchronous Registered (Buffered)   6400 MT/s   2      6400 MT/s          0        8         0  
+BANK 9         CPU0_DIMM_J   Micron         MTC20F2085S1RC64BDY   4241599E   32 GB   DDR5   Synchronous Registered (Buffered)   6400 MT/s   2      6400 MT/s          0        9         0  
+BANK 10        CPU0_DIMM_K   Micron         MTC20F2085S1RC64BDY   42412D32   32 GB   DDR5   Synchronous Registered (Buffered)   6400 MT/s   2      6400 MT/s          0        10        0  
+BANK 11        CPU0_DIMM_L   Micron         MTC20F2085S1RC64BDY   423AC685   32 GB   DDR5   Synchronous Registered (Buffered)   6400 MT/s   2      6400 MT/s          0        11        0  
+BANK 12        CPU1_DIMM_A   Micron         MTC20F2085S1RC64BDY   4241599A   32 GB   DDR5   Synchronous Registered (Buffered)   6400 MT/s   2      6400 MT/s          1        0         0  
+BANK 13        CPU1_DIMM_B   Micron         MTC20F2085S1RC64BDY   423ADBAF   32 GB   DDR5   Synchronous Registered (Buffered)   6400 MT/s   2      6400 MT/s          1        1         0  
+BANK 14        CPU1_DIMM_C   Micron         MTC20F2085S1RC64BDY   423ADA6A   32 GB   DDR5   Synchronous Registered (Buffered)   6400 MT/s   2      6400 MT/s          1        2         0  
+BANK 15        CPU1_DIMM_D   Micron         MTC20F2085S1RC64BDY   423AD9F1   32 GB   DDR5   Synchronous Registered (Buffered)   6400 MT/s   2      6400 MT/s          1        3         0  
+BANK 16        CPU1_DIMM_E   Micron         MTC20F2085S1RC64BDY   423AD1F0   32 GB   DDR5   Synchronous Registered (Buffered)   6400 MT/s   2      6400 MT/s          1        4         0  
+BANK 17        CPU1_DIMM_F   Micron         MTC20F2085S1RC64BDY   423AC317   32 GB   DDR5   Synchronous Registered (Buffered)   6400 MT/s   2      6400 MT/s          1        5         0  
+BANK 18        CPU1_DIMM_G   Micron         MTC20F2085S1RC64BDY   423AC6A1   32 GB   DDR5   Synchronous Registered (Buffered)   6400 MT/s   2      6400 MT/s          1        6         0  
+BANK 19        CPU1_DIMM_H   Micron         MTC20F2085S1RC64BDY   423AC6E8   32 GB   DDR5   Synchronous Registered (Buffered)   6400 MT/s   2      6400 MT/s          1        7         0  
+BANK 20        CPU1_DIMM_I   Micron         MTC20F2085S1RC64BDY   423AC72A   32 GB   DDR5   Synchronous Registered (Buffered)   6400 MT/s   2      6400 MT/s          1        8         0  
+BANK 21        CPU1_DIMM_J   Micron         MTC20F2085S1RC64BDY   423ABD69   32 GB   DDR5   Synchronous Registered (Buffered)   6400 MT/s   2      6400 MT/s          1        9         0  
+BANK 22        CPU1_DIMM_K   Micron         MTC20F2085S1RC64BDY   423AC731   32 GB   DDR5   Synchronous Registered (Buffered)   6400 MT/s   2      6400 MT/s          1        10        0  
+BANK 23        CPU1_DIMM_L   Micron         MTC20F2085S1RC64BDY   423AC3E7   32 GB   DDR5   Synchronous Registered (Buffered)   6400 MT/s   2      6400 MT/s          1        11        0  
+
+Network Configuration
+=====================
+net.ipv4.tcp_rmem:            4096	131072	6291456
+net.ipv4.tcp_wmem:            4096	16384	4194304
+net.core.rmem_max:            212992
+net.core.wmem_max:            212992
+net.core.netdev_max_backlog:  1000
+net.ipv4.tcp_max_syn_backlog: 4096
+net.core.somaxconn:           4096
+IRQ Balance:                  Enabled
+
+NIC
+===
+Name   Vendor (ID)                  Model (ID)                                 MAC Address         Speed      Link   Bus            Card / Port   NUMA Node   Driver   Driver Version                    Firmware Version   MTU    TX Queues   RX Queues   Adaptive RX   Adaptive TX   rx-usecs   tx-usecs
+----   -----------                  ----------                                 -----------         -----      ----   ---            -----------   ---------   ------   --------------                    ----------------   ---    ---------   ---------   -----------   -----------   --------   --------
+eno1   Intel Corporation (0x8086)   I210 Gigabit Network Connection (0x1533)   a4:bf:01:8c:d1:02   1000Mb/s   yes    0000:16:00.0   1 / 1         0           igb      6.6.0-gnr.bkc.6.6.37.1.51.x86_6   3.25, 0x800005cc   1500   4           4           off           off           3          0  
+
+NIC CPU Affinity
+================
+Interface   IRQ:CPU | IRQ:CPU | ...
+---------   -----------------------
+eno1        437:267 | 438:263 | 439:27 | 440:9 | 441:21
+
+NIC Packet Steering
+===================
+Interface   Type   Queue:CPU(s) | Queue|CPU(s) | ...
+---------   ----   ---------------------------------
+eno1        XPS       
+eno1        RPS       
+
+Disk
+====
+Name                      Model                        Size   Mount Point    Type          Request Queue Size   Minimum I/O Size   Firmware Version   PCIe Address   NUMA Node   Link Speed       Link Width   Max Link Speed   Max Link Width
+----                      -----                        ----   -----------    ----          ------------------   ----------------   ----------------   ------------   ---------   ----------       ----------   --------------   --------------
+nvme1n1                   SAMSUNG MZWLR7T6HALA-00007   7T     /mnt/nvme1n1   xfs                                512                MPK90B5Q                          2           16.0 GT/s PCIe   4            16.0 GT/s PCIe   4  
+nvme0n1                   Micron_7450_MTFDKBG1T9TFR    1.7T                                1023                 262144             E2MU110            0000:15:00.0   0           16.0 GT/s PCIe   2            16.0 GT/s PCIe   4  
+nvme0n1p1                                              600M   /boot/efi      vfat          1023                 262144                                                                                                             
+nvme0n1p2                                              1G     /boot          xfs           1023                 262144                                                                                                             
+nvme0n1p3                                              1.7T                  LVM2_member   1023                 262144                                                                                                             
+cs_sh14l47002s1203-root                                70G    /              xfs                                262144                                                                                                             
+cs_sh14l47002s1203-swap                                4G     [SWAP]         swap                               262144                                                                                                             
+cs_sh14l47002s1203-home                                1.7T   /home          xfs                                262144                                                                                                             
+
+Filesystem
+==========
+Filesystem                            Size   Used   Avail   Use%   Mounted on                  Mount Options
+----------                            ----   ----   -----   ----   ----------                  -------------
+devtmpfs                              4.0M   0      4.0M    0%     /dev                        rw,nosuid,size=4096k,nr_inodes=98943524,mode=755
+tmpfs                                 378G   397M   378G    1%     /dev/shm                    rw,nosuid,nodev
+tmpfs                                 151G   23M    151G    1%     /run                        rw,nosuid,nodev,size=158317624k,nr_inodes=819200,mode=755
+efivarfs                              696K   213K   479K    31%    /sys/firmware/efi/efivars   rw,nosuid,nodev,noexec,relatime
+/dev/mapper/cs_sh14l47002s1203-root   70G    7.7G   63G     11%    /                           rw,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota
+/dev/nvme0n1p2                        960M   169M   792M    18%    /boot                       rw,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota
+/dev/mapper/cs_sh14l47002s1203-home   1.7T   16G    1.7T    1%     /home                       rw,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota
+/dev/nvme0n1p1                        599M   7.5M   592M    2%     /boot/efi                   rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=winnt,errors=remount-ro
+tmpfs                                 76G    4.0K   76G     1%     /run/user/0                 rw,nosuid,nodev,relatime,size=79158808k,nr_inodes=19789702,mode=700
+/dev/nvme1n1                          7.0T   340G   6.7T    5%     /mnt/nvme1n1                rw,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota
+
+GPU
+===
+Manufacturer   Model     PCI ID
+------------   -----     ------
+ASPEED         Unknown   1A03:2000
+
+Gaudi
+=====
+No data found.
+
+CXL
+===
+No data found.
+
+PCIe
+====
+Designation                            Type                                      Length    Bus Address    Current Usage
+-----------                            ----                                      ------    -----------    -------------
+J2C1 - Riser 1 (X8_CPU0PE0), slot 1    x8 EDSFF E1                               Unknown                  Unavailable
+J2D1 - M.2 (X2_CPU0PE0), slot 2        x2 PCI Express 5 x2                       Unknown   0000:15:00.0   In Use
+J2D1 - LOM (X2_CPU0PE0), slot 3        x2 PCI Express 5 x2                       Unknown   0000:16:00.0   In Use
+J3D1 - DC-SCM (X2_CPU0PE0), slot 4     x2 PCI Express 5 x2                       Unknown   0000:18:00.0   In Use
+J3D1 - DC-SCM (X2_CPU0PE0), slot 5     x2 PCI Express 5 x2                       Unknown   0000:19:00.0   In Use
+J2A16 - SLOT_C (X16_CPU0PE1), slot 6   x16 PCI Express 5 x16                     Unknown                  Unavailable
+J2D4 - Riser 2 (X16_CPU0PE2), slot 7   x16 EDSFF E1                              Unknown                  Unavailable
+J2D3 - MCIO (X4_CPU0PE3), slot 8       x4 PCI Express 5 x4                       Unknown                  Unavailable
+J2D5 - MCIO (X4_CPU0PE3), slot 9       x4 PCI Express 5 x4                       Unknown                  Unavailable
+J1D5 - MCIO (X4_CPU0PE3), slot 10      x4 PCI Express 5 x4                       Unknown                  Unavailable
+J1D9 - MCIO (X4_CPU0PE3), slot 11      x4 PCI Express 5 x4                       Unknown                  Unavailable
+J3K3 - MCIO (X4_CPU0PE4), slot 12      x4 PCI Express 5 x4                       Unknown                  Unavailable
+J3K2 - MCIO (X4_CPU0PE4), slot 13      x4 PCI Express 5 x4                       Unknown                  Unavailable
+J4K1 - MCIO (X4_CPU0PE4), slot 14      x4 PCI Express 5 x4                       Unknown                  Unavailable
+J4K2 - MCIO (X4_CPU0PE4), slot 15      x4 PCI Express 5 x4                       Unknown                  Unavailable
+J1K2 - MCIO (X4_CPU0PE5), slot 16      x4 PCI Express 5 x4                       Unknown   0000:6e:00.0   In Use
+J1K1 - MCIO (X4_CPU0PE5), slot 17      x4 PCI Express 5 x4                       Unknown                  Unavailable
+J2K3 - MCIO (X4_CPU0PE5), slot 18      x4 PCI Express 5 x4                       Unknown                  Unavailable
+J2K2 - MCIO (X4_CPU0PE5), slot 19      x4 PCI Express 5 x4                       Unknown                  Unavailable
+J9E1 - MCIO (X4_CPU1PE0), slot 1       x4 PCI Express 5 x4                       Unknown                  Unavailable
+J9D2 - MCIO (X4_CPU1PE0), slot 2       x4 PCI Express 5 x4                       Unknown                  Unavailable
+J8E1 - MCIO (X4_CPU1PE0), slot 3       x4 PCI Express 5 x4                       Unknown                  Unavailable
+J8D5 - MCIO (X4_CPU1PE0), slot 4       x4 PCI Express 5 x4                       Unknown                  Unavailable
+J6C1 - OCP 3.0 (X16_CPU1PE1), slot 5   x16 OCP NIC 3.0 Small Form Factor (SFF)   Unknown                  Unavailable
+J9A7 - SLOTB (X16_CPU1PE2), slot 6     x16 EDSFF E1                              Unknown                  Unavailable
+J7D3 - Riser 3 (X16_CPU1PE3), slot 7   x16 EDSFF E1                              Unknown                  Unavailable
+J8K1 - MCIO (X4_CPU1PE4), slot 8       x4 PCI Express 5 x4                       Unknown                  Unavailable
+J8K3 - MCIO (X4_CPU1PE4), slot 9       x4 PCI Express 5 x4                       Unknown                  Unavailable
+J8K2 - MCIO (X4_CPU1PE4), slot 10      x4 PCI Express 5 x4                       Unknown                  Unavailable
+J8K4 - MCIO (X4_CPU1PE4), slot 11      x4 PCI Express 5 x4                       Unknown                  Unavailable
+J6K3 - MCIO (X4_CPU1PE5), slot 12      x4 PCI Express 5 x4                       Unknown                  Unavailable
+J6K1 - MCIO (X4_CPU1PE5), slot 13      x4 PCI Express 5 x4                       Unknown                  Unavailable
+J6K4 - MCIO (X4_CPU1PE5), slot 14      x4 PCI Express 5 x4                       Unknown                  Unavailable
+J6K2 - MCIO (X4_CPU1PE5), slot 15      x4 PCI Express 5 x4                       Unknown                  Unavailable
+
+CVE
+===
+CVE-2017-5715:  OK (Mitigation: Enhanced / Automatic IBRS, IBPB: conditional, RSB filling, PBRSB-eIBRS: Not affected)
+CVE-2017-5753:  OK (Mitigation: usercopy/swapgs barriers and __user pointer sanitization)
+CVE-2017-5754:  OK (your CPU vendor reported your CPU model as not affected)
+CVE-2018-12126: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2018-12127: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2018-12130: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2018-12207: OK (this system is not running a hypervisor)
+CVE-2018-3615:  OK (your CPU vendor reported your CPU model as not affected)
+CVE-2018-3620:  OK (your CPU vendor reported your CPU model as not affected)
+CVE-2018-3639:  OK (Mitigation: Speculative Store Bypass disabled via prctl)
+CVE-2018-3640:  OK (your CPU microcode mitigates the vulnerability)
+CVE-2018-3646:  OK (your CPU vendor reported your CPU model as not affected)
+CVE-2019-11091: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2019-11135: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2020-0543:  OK (your CPU vendor reported your CPU model as not affected)
+CVE-2022-21123: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2022-21125: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2022-21166: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2022-29900: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2022-29901: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2022-40982: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2023-20569: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2023-20588: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2023-20593: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2023-23583: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2023-28746: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2024-28956: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2024-36350: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2024-36357: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2024-45332: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2025-40300: OK (this system is not running a hypervisor)
+CVE-2025-54505: OK (your CPU vendor reported your CPU model as not affected)
+
+Process
+=======
+PID      PPID     %CPU   %MEM   RSS     COMMAND
+---      ----     ----   ----   ---     -------
+139615   139587   3.7    0.0    40984   ./perfspect report --format html,json,txt
+139857   139615   0.2    0.0    0       bash /tmp/perfspect.tmp.4149957619/controller.sh
+6993     1        0.1    0.0    0       /usr/sbin/irqbalance --foreground
+144653   144650   0.0    0.0    0       head -n 20
+144651   144650   0.0    0.0    3840    ps -eo pid,ppid,%cpu,%mem,rss,command --sort=-%cpu,-pid
+144650   139857   0.0    0.0    0       bash /tmp/perfspect.tmp.4149957619/process_list.sh
+139616   139587   0.0    0.0    0       tail -10
+139587   139586   0.0    0.0    0       bash -c cd /home/bjiang7 && mkdir -p perfspect-run && cd perfspect-run && curl -sLO https://github.com/intel/PerfSpect/releases/latest/download/perfspect.tgz && tar zxf perfspect.tgz && cd perfspect && ./perfspect report --format html,json,txt 2>&1 | tail -10 && ls perfspect_*/
+139586   139584   0.0    0.0    3852    sshd: root@notty
+58346    58345    0.0    0.0    3840    /usr/libexec/openssh/sftp-server
+58345    58292    0.0    0.0    3840    sshd: root@notty
+58295    58294    0.0    0.0    3840    -bash
+58294    58290    0.0    0.0    3840    sshd: root@pts/1
+7364     7051     0.0    0.0    0       -bash
+7356     7355     0.0    0.0    3952    (sd-pam)
+7355     1        0.0    0.0    7688    /usr/lib/systemd/systemd --user
+7320     1        0.0    0.0    3844    /usr/sbin/rsyslogd -n
+7262     1        0.0    0.0    19220   /usr/lib/polkit-1/polkitd --no-debug
+7051     1        0.0    0.0    3848    login -- root
+
+Sensor
+======
+Sensor             Reading             Status
+------             -------             ------
+CPU1 North VR Ou   2 Amps              ok 
+CPU1 South VR Ou   2 Amps              ok 
+CPU1 VNN EHV Out   0 Amps              ok 
+CPU2 North VR Ou   2 Amps              ok 
+CPU2 South VR Ou   3 Amps              ok 
+CPU2 VNN EHV Out   0 Amps              ok 
+DCSCM OCP 12V Ou   0 Amps              ok 
+HSBP 12V Out Cur   0 Amps              ok 
+PCIe 3V3 Out Cur   0 Amps              ok 
+PCIe 12V Out Cur   0 Amps              ok 
+PSU1 In Current    2.34 Amps           ok 
+PSU1 Out Current   34 Amps             ok 
+System Fans SE 1   0 Amps              ok 
+System Fans SW 1   0 Amps              ok 
+Cpu Energy CPU1    336 unspecified     ok 
+Cpu Energy CPU2    1730.40 unspeci     ok 
+Dimm Energy CPU1   67.20 unspecifi     ok 
+Dimm Energy CPU2   856.80 unspecif     ok 
+Platform Energy    386.40 unspecif     ok 
+Platform Energy    1898.40 unspeci     ok 
+Pwm 1 2            39.98 unspecifi     ok 
+Pwm 3 4            39.98 unspecifi     ok 
+Pwm 5 6            39.98 unspecifi     ok 
+Pwm 7 8            39.98 unspecifi     ok 
+Pwm 9 10           39.98 unspecifi     ok 
+Pwm 11 12          39.98 unspecifi     ok 
+Pwm PSU1 Fan 1     39.98 unspecifi     ok 
+Pwm PSU1 Fan 2     39.98 unspecifi     ok 
+Fan 1              5488 RPM            ok 
+Fan 2              6566 RPM            ok 
+Fan 3              0 RPM               ok 
+Fan 4              6566 RPM            ok 
+Fan 5              0 RPM               ok 
+Fan 6              0 RPM               ok 
+Fan 7              0 RPM               ok 
+Fan 8              0 RPM               ok 
+Fan 9              6566 RPM            ok 
+Fan 10             5488 RPM            ok 
+Fan 11             0 RPM               ok 
+Fan 12             6468 RPM            ok 
+PSU1 Fan Speed 1   8260 RPM            ok 
+PSU1 Fan Speed 2   6962 RPM            ok 
+CPU1 North VR In   0 Watts             ok 
+CPU1 South VR In   0 Watts             ok 
+CPU1 VNN EHV In    0 Watts             ok 
+CPU2 North VR In   0 Watts             ok 
+CPU2 South VR In   0 Watts             ok 
+CPU2 VNN EHV In    0 Watts             ok 
+Cpu Power Averag   176 Watts           ok 
+Cpu Power Averag   164 Watts           ok 
+Cpu Power Cap CP   0 Watts             ok 
+Cpu Power Cap CP   0 Watts             ok 
+DCSCM OCP 12V In   0 Watts             ok 
+Dimm Power Avera   24 Watts            ok 
+Dimm Power Avera   28 Watts            ok 
+Dimm Power Cap C   0 Watts             ok 
+Dimm Power Cap C   0 Watts             ok 
+HSBP 12V Out Pow   0 Watts             ok 
+PCIe 3V3 In Powe   0 Watts             ok 
+PCIe 12V In Powe   0 Watts             ok 
+PSU1 Input Power   531 Watts           ok 
+PSU1 Out Power     401.20 Watts        ok 
+Platform Power A   510 Watts           ok 
+Platform Power A   400 Watts           ok 
+Platform Power C   0 Watts             ok 
+Platform Power C   0 Watts             ok 
+System Fans SE 1   0 Watts             ok 
+System Fans SW 1   0 Watts             ok 
+BMC Temp           22 degrees C        ok 
+DIMM A1 CPU1       20 degrees C        ok 
+DIMM A1 CPU2       21 degrees C        ok 
+DIMM A2 CPU1       20 degrees C        ok 
+DIMM A2 CPU2       21 degrees C        ok 
+DIMM B1 CPU1       20 degrees C        ok 
+DIMM B1 CPU2       21 degrees C        ok 
+DIMM B2 CPU1       20 degrees C        ok 
+DIMM B2 CPU2       21 degrees C        ok 
+DIMM C1 CPU1       19 degrees C        ok 
+DIMM C1 CPU2       20 degrees C        ok 
+DIMM C2 CPU1       19 degrees C        ok 
+DIMM C2 CPU2       20 degrees C        ok 
+DIMM D1 CPU1       20 degrees C        ok 
+DIMM D1 CPU2       21 degrees C        ok 
+DIMM D2 CPU1       20 degrees C        ok 
+DIMM D2 CPU2       21 degrees C        ok 
+DIMM E1 CPU1       20 degrees C        ok 
+DIMM E1 CPU2       21 degrees C        ok 
+DIMM E2 CPU1       20 degrees C        ok 
+DIMM E2 CPU2       21 degrees C        ok 
+DIMM F1 CPU1       19 degrees C        ok 
+DIMM F1 CPU2       20 degrees C        ok 
+DIMM F2 CPU1       19 degrees C        ok 
+DIMM F2 CPU2       20 degrees C        ok 
+DIMM G1 CPU1       20 degrees C        ok 
+DIMM G1 CPU2       19 degrees C        ok 
+DIMM G2 CPU1       20 degrees C        ok 
+DIMM G2 CPU2       19 degrees C        ok 
+DIMM H1 CPU1       20 degrees C        ok 
+DIMM H1 CPU2       20 degrees C        ok 
+DIMM H2 CPU1       20 degrees C        ok 
+DIMM H2 CPU2       20 degrees C        ok 
+DIMM I1 CPU1       20 degrees C        ok 
+DIMM I1 CPU2       19 degrees C        ok 
+DIMM I2 CPU1       20 degrees C        ok 
+DIMM I2 CPU2       19 degrees C        ok 
+DIMM J1 CPU1       19 degrees C        ok 
+DIMM J1 CPU2       19 degrees C        ok 
+DIMM J2 CPU1       19 degrees C        ok 
+DIMM J2 CPU2       19 degrees C        ok 
+DIMM K1 CPU1       19 degrees C        ok 
+DIMM K1 CPU2       20 degrees C        ok 
+DIMM K2 CPU1       19 degrees C        ok 
+DIMM K2 CPU2       20 degrees C        ok 
+DIMM L1 CPU1       19 degrees C        ok 
+DIMM L1 CPU2       19 degrees C        ok 
+DIMM L2 CPU1       19 degrees C        ok 
+DIMM L2 CPU2       19 degrees C        ok 
+DTS CPU1           27 degrees C        ok 
+DTS CPU2           28 degrees C        ok 
+Die CPU1           27 degrees C        ok 
+Die CPU2           28 degrees C        ok 
+Inlet BRD Temp     19 degrees C        ok 
+Left DIMM Bank T   19 degrees C        ok 
+Left Mid Board T   20 degrees C        ok 
+Left Rear Board    19 degrees C        ok 
+NVMe M2 EDSFF Sl   37 degrees C        ok 
+PSU1 Temperature   21 degrees C        ok 
+Right DIMM Bank    21 degrees C        ok 
+Right Mid Board    21 degrees C        ok 
+Right Rear Board   19 degrees C        ok 
+Slot1 HSBP1 Temp   18 degrees C        ok 
+AverageCupsIndex   no reading          ns 
+AverageHostCpuUt   no reading          ns 
+AverageHostMemor   no reading          ns 
+AverageHostPciBa   no reading          ns 
+CupsIndex          no reading          ns 
+HostCpuUtilizati   no reading          ns 
+HostMemoryBandwi   no reading          ns 
+HostPciBandwidth   no reading          ns 
+CPU1 North VR In   1.18 Volts          ok 
+CPU1 South VR In   1.18 Volts          ok 
+CPU1 VNN EHV In    1.18 Volts          ok 
+CPU2 North VR In   1.18 Volts          ok 
+CPU2 South VR In   1.18 Volts          ok 
+CPU2 VNN EHV In    1.18 Volts          ok 
+DCSCM OCP 12V In   1.18 Volts          ok 
+HSBP 12V Out Vol   12 Volts            ok 
+P3V BAT CPU0       2.84 Volts          ok 
+P12V NORTH         12.15 Volts         ok 
+PCIe 3V3 In Volt   1.18 Volts          ok 
+PCIe 12V In Volt   1.18 Volts          ok 
+PSU1 In Voltage    231.28 Volts        ok 
+PVCCD0 HV CPU0     1.14 Volts          ok 
+PVCCD0 HV CPU1     1.14 Volts          ok 
+PVCCD1 HV CPU0     1.14 Volts          ok 
+PVCCD1 HV CPU1     1.14 Volts          ok 
+PVCCFA EHV CPU0    1.82 Volts          ok 
+PVCCFA EHV CPU1    1.82 Volts          ok 
+PVCCFA EHV FIVRA   1.82 Volts          ok 
+PVCCFA EHV FIVRA   1.82 Volts          ok 
+PVCCINF CPU0       0.77 Volts          ok 
+PVCCINF CPU1       0.75 Volts          ok 
+PVCCIN CPU0        1.86 Volts          ok 
+PVCCIN CPU1        1.86 Volts          ok 
+PVNN MAIN CPU0     1.01 Volts          ok 
+PVNN MAIN CPU1     1.02 Volts          ok 
+System Fans SE 1   12 Volts            ok 
+System Fans SW 1   12 Volts            ok 
+
+Chassis Status
+==============
+System Power:         on
+Power Overload:       false
+Power Interlock:      inactive
+Main Power Fault:     false
+Power Control Fault:  false
+Power Restore Policy: always-off
+Last Power Event:     
+Chassis Intrusion:    active
+Front-Panel Lockout:  inactive
+Drive Fault:          false
+Cooling/Fan Fault:    false
+
+PMU
+===
+PMU Driver Version: 5
+cpu_cycles:         Active
+instructions:       Inactive
+ref_cycles:         Inactive
+topdown_slots:      Inactive
+gen_programmable_1: Inactive
+gen_programmable_2: Inactive
+gen_programmable_3: Inactive
+gen_programmable_4: Inactive
+gen_programmable_5: Inactive
+gen_programmable_6: Inactive
+gen_programmable_7: Inactive
+gen_programmable_8: Inactive
+
+System Event Log
+================
+No data found.
+
+Kernel Log
+==========
+Entries
+-------
+[  +3.077397] igb 0000:16:00.0 eno1: igb: eno1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+[Apr27 03:14] XFS (nvme1n1): Mounting V5 Filesystem 7d46bbdf-6a17-4314-9655-91dbe0976f1e
+[  +0.013491] XFS (nvme1n1): Starting recovery (logdev: internal)
+[  +0.008559] XFS (nvme1n1): Ending recovery (logdev: internal)
+[Apr27 05:23] nvme 0000:6e:00.0: Using 56-bit DMA addresses
+[  +0.000037] nvme 0000:6e:00.0: Using 56-bit DMA addresses
+[  +0.000005] nvme 0000:6e:00.0: Using 56-bit DMA addresses
+[  +0.000008] nvme 0000:6e:00.0: Using 56-bit DMA addresses
+[  +0.000016] nvme 0000:6e:00.0: Using 56-bit DMA addresses
+[  +0.000006] nvme 0000:6e:00.0: Using 56-bit DMA addresses
+[  +0.000001] nvme 0000:6e:00.0: Using 56-bit DMA addresses
+[  +0.000016] nvme 0000:6e:00.0: Using 56-bit DMA addresses
+[  +0.000000] nvme 0000:6e:00.0: Using 56-bit DMA addresses
+[  +0.000051] nvme 0000:6e:00.0: Using 56-bit DMA addresses
+[  +0.000016] nvme 0000:6e:00.0: Using 56-bit DMA addresses
+[  +0.000004] nvme 0000:6e:00.0: Using 56-bit DMA addresses
+[  +0.000047] nvme 0000:6e:00.0: Using 56-bit DMA addresses
+[  +0.000004] nvme 0000:6e:00.0: Using 56-bit DMA addresses
+[  +0.000033] nvme 0000:6e:00.0: Using 56-bit DMA addresses
+[Apr27 05:25] hrtimer: interrupt took 4275293 ns
+   
+
+Insights
+========
+Recommendation                                                                                                                          Justification
+--------------                                                                                                                          -------------
+Consider configuring DSA to allow accelerated data copy and transformation in DSA-enabled software.                                     No work queues are configured for DSA accelerator(s).
+Consider configuring IAA to allow accelerated compression and decompression in IAA-enabled software.                                    No work queues are configured for IAA accelerator(s).
+Consider setting Efficiency Latency Control mode to 'Optimized Power Mode (OPM)' to balance uncore performance and power utilization.   ELC mode is set to 'Latency Optimized Mode (LOM)' on at least one die.
+Consider enabling Automatic NUMA Balancing.                                                                                             Automatic NUMA Balancing is not enabled.
+
+PerfSpect
+=========
+Version:   3.17.0_2026-04-20_956744c9
+Args:      ./perfspect report --format html,json,txt
+OutputDir: /home/bjiang7/perfspect-run/perfspect/perfspect_2026-04-27_10-46-18
+

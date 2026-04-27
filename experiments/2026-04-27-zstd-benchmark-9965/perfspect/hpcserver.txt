@@ -1,0 +1,463 @@
+System Summary
+==============
+Host Name:                     hpcserver
+Time:                          Mon Apr 27 02:56:57 PM UTC 2026
+System:                        ASUSTeK COMPUTER INC. RS720A-E13-RS12U, 0A
+Baseboard:                     ASUSTeK COMPUTER INC. K15PP-D24 Series, 60SB0D10-SB0B01
+Chassis:                       ASUSTeK COMPUTER INC. Rack Mount Chassis, 13SF0150AM0101
+CPU Model:                     AMD EPYC 9965 192-Core Processor
+Architecture:                  x86_64
+Microarchitecture:             Turin (Zen 5c)
+L3 Cache (instance/total):     32M/384M
+Cores per Socket:              192
+Sockets:                       1
+Hyperthreading:                Enabled
+CPUs:                          384
+Intel Turbo Boost:             enabled (AMD Frequency Boost)
+Base Frequency:                2.2GHz
+Maximum Frequency:             
+All-core Maximum Frequency:    
+NUMA Nodes:                    1
+Prefetchers:                   None
+PPINs:                         
+Accelerators Available [used]: DLB 0 [0], DSA 0 [0], IAA 0 [0], QAT 0 [0], vRAN Boost 0 [0]
+Installed Memory:              768GB (12x64GB DDR5 5600MT/s [5600MT/s])
+Hugepagesize:                  2048 kB
+Transparent Huge Pages:        madvise
+Automatic NUMA Balancing:      Disabled
+NIC:                           1x AX88179 Gigabit Ethernet, 1x American Megatrends, Inc. Unknown Model
+Disk:                          1x 1024M IPMI CDROM0, 1x 1.7T INTEL SSDPF2KX019T1M, 2x 931.5G INTEL SSDPE2KX010T8, 1x 894.3G SAMSUNG MZQLB960HAJR-00007
+BIOS:                          0304
+Microcode:                     0xb101021
+OS:                            Ubuntu 24.04.3 LTS
+Kernel:                        6.8.0-88-generic
+TDP:                           
+Energy Performance Bias:       
+Energy Performance Preference: 
+Scaling Governor:              schedutil
+Scaling Driver:                acpi-cpufreq
+C-states:                      POLL: Enabled, C1: Enabled, C2: Enabled
+Efficiency Latency Control:    
+CVEs:                          32 OK, 0 Vulnerable
+System Summary:                1-node, ASUSTeK COMPUTER INC. RS720A-E13-RS12U, 1x AMD EPYC 9965 192-Core Processor, 192 cores, ? TDP, SMT On, Boost On, Total Memory 768GB (12x64GB DDR5 5600MT/s [5600MT/s]), BIOS 0304, microcode 0xb101021, 1x AX88179 Gigabit Ethernet, 1x American Megatrends, Inc. Unknown Model, 1x 1024M IPMI CDROM0, 1x 1.7T INTEL SSDPF2KX019T1M, 2x 931.5G INTEL SSDPE2KX010T8, 1x 894.3G SAMSUNG MZQLB960HAJR-00007, Ubuntu 24.04.3 LTS, 6.8.0-88-generic. Test by Intel as of Mon Apr 27 02:56:57 PM UTC 2026.
+
+Host
+====
+Host Name: hpcserver
+Time:      Mon Apr 27 02:56:57 PM UTC 2026
+System:    ASUSTeK COMPUTER INC. RS720A-E13-RS12U, 0A
+Baseboard: ASUSTeK COMPUTER INC. K15PP-D24 Series, 60SB0D10-SB0B01
+Chassis:   ASUSTeK COMPUTER INC. Rack Mount Chassis, 13SF0150AM0101
+
+BIOS
+====
+Vendor:       American Megatrends Inc.
+Version:      0304
+Release Date: 11/29/2024
+
+Operating System
+================
+OS:              Ubuntu 24.04.3 LTS
+Kernel:          6.8.0-88-generic
+Boot Parameters: BOOT_IMAGE=/vmlinuz-6.8.0-88-generic root=/dev/mapper/ubuntu--vg-ubuntu--lv ro
+Microcode:       0xb101021
+
+Software Version
+================
+GCC:      gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+GLIBC:    ldd (Ubuntu GLIBC 2.39-0ubuntu8.6) 2.39
+Binutils: GNU ld (GNU Binutils for Ubuntu) 2.42
+Python:   
+Python3:  Python 3.12.3
+Java:     
+OpenSSL:  OpenSSL 3.0.13 30 Jan 2024 (Library: OpenSSL 3.0.13 30 Jan 2024)
+
+CPU
+===
+CPU Model:                  AMD EPYC 9965 192-Core Processor
+Architecture:               x86_64
+Microarchitecture:          Turin (Zen 5c)
+Family:                     26
+Model:                      17
+Stepping:                   0
+Base Frequency:             2.2GHz
+Maximum Frequency:          
+All-core Maximum Frequency: 
+CPUs:                       384
+On-line CPU List:           0-383
+Hyperthreading:             Enabled
+Cores per Socket:           192
+Sockets:                    1
+NUMA Nodes:                 1
+NUMA CPU List:              0-383
+L1d Cache:                  48K
+L1i Cache:                  32K
+L2 Cache:                   1M
+L3 Cache (instance/total):  32M/384M
+L3 per Core:                2M
+Memory Channels:            12
+Intel Turbo Boost:          enabled (AMD Frequency Boost)
+Virtualization:             AMD-V
+PPINs:                      
+
+ISA
+===
+Advanced Encryption Standard New Instructions (AES-NI): Yes
+Advanced Matrix Extensions (AMX):                       No
+AMX-COMPLEX Instruction:                                No
+AMX-FP16 Instruction:                                   No
+AVX-IFMA Instruction:                                   No
+AVX-NE-CONVERT Instruction:                             No
+AVX-VNNI-INT8 Instruction:                              No
+AVX-512 Foundation:                                     Yes
+Vector Neural Network Instructions (AVX512_BF16):       Yes
+Advanced Vector Extensions (AVX512_FP16):               No
+Vector Neural Network Instructions (AVX512_VNNI):       Yes
+Cache Line Demote (CLDEMOTE):                           No
+Compare and Add if Condition is Met (CMPCCXADD):        No
+Enqueue Command Instruction (ENQCMD):                   No
+Move Doubleword as Direct Store (MOVDIRI):              Yes
+Move 64 Bytes as Direct Store (MOVDIR64B):              Yes
+PREFETCHIT0/1 Instruction:                              No
+SERIALIZE Instruction:                                  No
+SHA1/SHA256 Instruction Extensions (SHA_NI):            Yes
+Transactional Synchronization Extensions (TSXLDTRK):    No
+Vector AES:                                             Yes
+UMONITOR, UMWAIT, TPAUSE Instructions:                  No
+
+C-state
+=======
+Name   Status
+----   ------
+POLL   Enabled
+C1     Enabled
+C2     Enabled
+
+Memory
+======
+Installed Memory:              768GB (12x64GB DDR5 5600MT/s [5600MT/s])
+MemTotal:                      791540792 kB
+MemFree:                       723037476 kB
+MemAvailable:                  780951492 kB
+Buffers:                       576100 kB
+Cached:                        61101492 kB
+HugePages_Total:               0
+Hugepagesize:                  2048 kB
+Transparent Huge Pages:        madvise
+Automatic NUMA Balancing:      Disabled
+Populated Memory Channels:     
+Total Memory Encryption (TME): Unknown
+Clustering Mode:               
+
+DIMM
+====
+Bank Locator   Locator        Manufacturer   Part                 Serial               Size    Type   Detail                              Speed       Rank   Configured Speed   Socket   Channel   Slot
+------------   -------        ------------   ----                 ------               ----    ----   ------                              -----       ----   ----------------   ------   -------   ----
+P0 CHANNEL A   CPU1_DIMM_A1   Samsung        M321R8GA0PB0-CWMXJ   80CE042440517087AA   64 GB   DDR5   Synchronous Registered (Buffered)   5600 MT/s   2      5600 MT/s                                
+P0 CHANNEL B   CPU1_DIMM_B1   Samsung        M321R8GA0PB0-CWMXJ   80CE04244051708779   64 GB   DDR5   Synchronous Registered (Buffered)   5600 MT/s   2      5600 MT/s                                
+P0 CHANNEL C   CPU1_DIMM_C1   Samsung        M321R8GA0PB0-CWMXJ   80CE0424405170877A   64 GB   DDR5   Synchronous Registered (Buffered)   5600 MT/s   2      5600 MT/s                                
+P0 CHANNEL D   CPU1_DIMM_D1   Samsung        M321R8GA0PB0-CWMXJ   80CE04244051707BE4   64 GB   DDR5   Synchronous Registered (Buffered)   5600 MT/s   2      5600 MT/s                                
+P0 CHANNEL E   CPU1_DIMM_E1   Samsung        M321R8GA0PB0-CWMXJ   80CE04244051707BE3   64 GB   DDR5   Synchronous Registered (Buffered)   5600 MT/s   2      5600 MT/s                                
+P0 CHANNEL F   CPU1_DIMM_F1   Samsung        M321R8GA0PB0-CWMXJ   80CE04244051707BC4   64 GB   DDR5   Synchronous Registered (Buffered)   5600 MT/s   2      5600 MT/s                                
+P0 CHANNEL G   CPU1_DIMM_G1   Samsung        M321R8GA0PB0-CWMXJ   80CE04244051707C0E   64 GB   DDR5   Synchronous Registered (Buffered)   5600 MT/s   2      5600 MT/s                                
+P0 CHANNEL H   CPU1_DIMM_H1   Samsung        M321R8GA0PB0-CWMXJ   80CE04244051707BC5   64 GB   DDR5   Synchronous Registered (Buffered)   5600 MT/s   2      5600 MT/s                                
+P0 CHANNEL I   CPU1_DIMM_I1   Samsung        M321R8GA0PB0-CWMXJ   80CE04244051708A6F   64 GB   DDR5   Synchronous Registered (Buffered)   5600 MT/s   2      5600 MT/s                                
+P0 CHANNEL J   CPU1_DIMM_J1   Samsung        M321R8GA0PB0-CWMXJ   80CE04244051707C24   64 GB   DDR5   Synchronous Registered (Buffered)   5600 MT/s   2      5600 MT/s                                
+P0 CHANNEL K   CPU1_DIMM_K1   Samsung        M321R8GA0PB0-CWMXJ   80CE042440517087A7   64 GB   DDR5   Synchronous Registered (Buffered)   5600 MT/s   2      5600 MT/s                                
+P0 CHANNEL L   CPU1_DIMM_L1   Samsung        M321R8GA0PB0-CWMXJ   80CE04244051707BDB   64 GB   DDR5   Synchronous Registered (Buffered)   5600 MT/s   2      5600 MT/s                                
+
+Network Configuration
+=====================
+net.ipv4.tcp_rmem:            4096	131072	6291456
+net.ipv4.tcp_wmem:            4096	16384	4194304
+net.core.rmem_max:            212992
+net.core.wmem_max:            212992
+net.core.netdev_max_backlog:  1000
+net.ipv4.tcp_max_syn_backlog: 4096
+net.core.somaxconn:           4096
+IRQ Balance:                  Disabled
+
+NIC
+===
+Name              Vendor (ID)                        Model (ID)                        MAC Address         Speed      Link   Bus                      Card / Port   NUMA Node   Driver         Driver Version     Firmware Version      MTU    TX Queues   RX Queues   Adaptive RX   Adaptive TX   rx-usecs   tx-usecs
+----              -----------                        ----------                        -----------         -----      ----   ---                      -----------   ---------   ------         --------------     ----------------      ---    ---------   ---------   -----------   -----------   --------   --------
+enx000ec6c4d2ee   ASIX Electronics Corp. (0b95)      AX88179 Gigabit Ethernet (1790)   00:0e:c6:c4:d2:ee   100Mb/s    yes    2-2.1:1.0                                          ax88179_178a   6.8.0-88-generic                         1500   1           1                                                     
+enx8e06c7fac736   American Megatrends, Inc. (046b)    (ffb0)                           8e:06:c7:fa:c7:36   Unknown!   no     usb-0000:e1:00.4-2.3.5   1 / 1                     cdc_ether      6.8.0-88-generic   CDC Ethernet Device   1500   1           1                                                     
+
+NIC CPU Affinity
+================
+No data found.
+
+NIC Packet Steering
+===================
+Interface         Type   Queue:CPU(s) | Queue|CPU(s) | ...
+---------         ----   ---------------------------------
+enx000ec6c4d2ee   XPS       
+enx000ec6c4d2ee   RPS       
+enx8e06c7fac736   XPS       
+enx8e06c7fac736   RPS       
+
+Disk
+====
+Name                    Model                        Size     Mount Point    Type          Request Queue Size   Minimum I/O Size   Firmware Version   PCIe Address   NUMA Node   Link Speed       Link Width   Max Link Speed   Max Link Width
+----                    -----                        ----     -----------    ----          ------------------   ----------------   ----------------   ------------   ---------   ----------       ----------   --------------   --------------
+sr0                     IPMI CDROM0                  1024M                                 2                    512                                                                                                                
+nvme3n1                 INTEL SSDPF2KX019T1M         1.7T                                  1023                 4096               9CV10200           0000:67:00.0   0           16.0 GT/s PCIe   4            16.0 GT/s PCIe   4  
+nvme3n1p1                                            600M                    vfat          1023                 4096                                                                                                               
+nvme3n1p2                                            1G                      xfs           1023                 4096                                                                                                               
+nvme3n1p3                                            1.7T                    LVM2_member   1023                 4096                                                                                                               
+rl-swap                                              4G                      swap                               4096                                                                                                               
+rl-home                                              1.7T     /mnt/oldhome   xfs                                4096                                                                                                               
+rl-root                                              70G                     xfs                                4096                                                                                                               
+nvme0n1                 INTEL SSDPE2KX010T8          931.5G                                1023                 512                VDV10131           0000:61:00.0   0           8.0 GT/s PCIe    4            8.0 GT/s PCIe    4  
+nvme1n1                 INTEL SSDPE2KX010T8          931.5G                                1023                 512                VDV10131           0000:63:00.0   0           8.0 GT/s PCIe    4            8.0 GT/s PCIe    4  
+nvme2n1                 SAMSUNG MZQLB960HAJR-00007   894.3G                                1023                 512                EDA5402Q           0000:65:00.0   0           8.0 GT/s PCIe    4            8.0 GT/s PCIe    4  
+nvme2n1p1                                            1G       /boot/efi      vfat          1023                 512                                                                                                                
+nvme2n1p2                                            2G       /boot          ext4          1023                 512                                                                                                                
+nvme2n1p3                                            891.2G                  LVM2_member   1023                 512                                                                                                                
+ubuntu--vg-ubuntu--lv                                100G     /              ext4                               512                                                                                                                
+
+Filesystem
+==========
+Filesystem                          Size   Used   Avail   Use%   Mounted on                  Mount Options
+----------                          ----   ----   -----   ----   ----------                  -------------
+tmpfs                               76G    3.2M   76G     1%     /run                        rw,nosuid,nodev,noexec,relatime,size=79154080k,mode=755,inode64
+efivarfs                            512K   63K    445K    13%    /sys/firmware/efi/efivars   rw,nosuid,nodev,noexec,relatime
+/dev/mapper/ubuntu--vg-ubuntu--lv   98G    66G    27G     71%    /                           rw,relatime
+tmpfs                               378G   0      378G    0%     /dev/shm                    rw,nosuid,nodev,inode64
+tmpfs                               5.0M   0      5.0M    0%     /run/lock                   rw,nosuid,nodev,noexec,relatime,size=5120k,inode64
+/dev/nvme2n1p2                      2.0G   198M   1.6G    11%    /boot                       rw,relatime
+/dev/nvme2n1p1                      1.1G   6.2M   1.1G    1%     /boot/efi                   rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro
+/dev/mapper/rl-home                 1.7T   1.4T   350G    80%    /mnt/oldhome                rw,relatime,attr2,inode64,logbufs=8,logbsize=32k,sunit=8,swidth=8,noquota
+tmpfs                               76G    16K    76G     1%     /run/user/0                 rw,nosuid,nodev,relatime,size=79154076k,nr_inodes=19788519,mode=700,inode64
+
+GPU
+===
+Manufacturer   Model     PCI ID
+------------   -----     ------
+ASPEED         Unknown   1A03:2000
+
+Gaudi
+=====
+No data found.
+
+CXL
+===
+No data found.
+
+PCIe
+====
+Designation   Type                Length   Bus Address    Current Usage
+-----------   ----                ------   -----------    -------------
+PCIE1         x16 PCI Express 5   Short    0000:61:00.0   In Use
+PCIE3         x16 PCI Express 5   Short    0000:ff:1f.7   Available
+PCIE5         x16 PCI Express 5   Short    0000:ff:1f.7   Available
+PCIE7         x16 PCI Express 5   Short    0000:ff:1f.7   Available
+PCIE9         x16 PCI Express 5   Short    0000:ff:1f.7   Available
+
+CVE
+===
+CVE-2017-5715:  OK (Mitigation: Enhanced / Automatic IBRS; IBPB: conditional; STIBP: always-on; RSB filling; PBRSB-eIBRS: Not affected; BHI: Not affected)
+CVE-2017-5753:  OK (Mitigation: usercopy/swapgs barriers and __user pointer sanitization)
+CVE-2017-5754:  OK (your CPU vendor reported your CPU model as not affected)
+CVE-2018-12126: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2018-12127: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2018-12130: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2018-12207: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2018-3615:  OK (your CPU vendor reported your CPU model as not affected)
+CVE-2018-3620:  OK (your CPU vendor reported your CPU model as not affected)
+CVE-2018-3639:  OK (Mitigation: Speculative Store Bypass disabled via prctl)
+CVE-2018-3640:  OK (your CPU vendor reported your CPU model as not affected)
+CVE-2018-3646:  OK (your CPU vendor reported your CPU model as not affected)
+CVE-2019-11091: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2019-11135: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2020-0543:  OK (your CPU vendor reported your CPU model as not affected)
+CVE-2022-21123: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2022-21125: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2022-21166: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2022-29900: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2022-29901: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2022-40982: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2023-20569: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2023-20588: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2023-20593: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2023-23583: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2023-28746: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2024-28956: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2024-36350: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2024-36357: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2024-45332: OK (your CPU vendor reported your CPU model as not affected)
+CVE-2025-40300: OK (Not affected)
+CVE-2025-54505: OK (your CPU vendor reported your CPU model as not affected)
+
+Process
+=======
+PID      PPID     %CPU   %MEM   RSS     COMMAND
+---      ----     ----   ----   ---     -------
+278107   278101   4.3    0.0    33792   ./perfspect report --format html,json,txt
+277983   1        0.4    0.0    9216    /usr/lib/systemd/systemd --user
+278288   278107   0.1    0.0    3072    bash /tmp/perfspect.tmp.3815685370/controller.sh
+4363     1        0.0    0.0    6144    /usr/lib/systemd/systemd-networkd
+4476     1        0.0    0.0    9216    /usr/lib/systemd/systemd-resolved
+1        0        0.0    0.0    12288   /sbin/init
+3300     1        0.0    0.0    0       /usr/lib/systemd/systemd-journald
+3349     1        0.0    0.0    21504   /sbin/multipathd -d -s
+22846    1        0.0    0.0    27648   /usr/libexec/fwupd/fwupd
+4477     1        0.0    0.0    6144    /usr/lib/systemd/systemd-timesyncd
+4539     1        0.0    0.0    6144    /usr/libexec/udisks2/udisksd
+4522     1        0.0    0.0    6144    /usr/lib/polkit-1/polkitd --no-debug
+4628     1        0.0    0.0    3072    /usr/sbin/rsyslogd -n -iNONE
+4516     1        0.0    0.0    3072    @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+4536     1        0.0    0.0    6144    /usr/lib/systemd/systemd-logind
+4747     1        0.0    0.0    0       /usr/sbin/cron -f -P
+3354     1        0.0    0.0    3072    /usr/lib/systemd/systemd-udevd
+4624     1        0.0    0.0    9216    /usr/sbin/ModemManager
+5158     1        0.0    0.0    6144    /usr/libexec/upowerd
+
+Sensor
+======
+Sensor             Reading             Status
+------             -------             ------
+CPU1 Temperature   31 degrees C        ok 
+CPU2 Temperature   disabled            ns 
+TR1 Temperature    21 degrees C        ok 
+TR2 Temperature    no reading          ns 
+TR3 Temperature    no reading          ns 
+TR4 Temperature    no reading          ns 
+CPU1_DIMMA1_Temp   27 degrees C        ok 
+CPU1_DIMMB1_Temp   27 degrees C        ok 
+CPU1_DIMMC1_Temp   26 degrees C        ok 
+CPU1_DIMMD1_Temp   27 degrees C        ok 
+CPU1_DIMME1_Temp   26 degrees C        ok 
+CPU1_DIMMF1_Temp   26 degrees C        ok 
+CPU1_DIMMG1_Temp   25 degrees C        ok 
+CPU1_DIMMH1_Temp   25 degrees C        ok 
+CPU1_DIMMI1_Temp   26 degrees C        ok 
+CPU1_DIMMJ1_Temp   25 degrees C        ok 
+CPU1_DIMMK1_Temp   25 degrees C        ok 
+CPU1_DIMML1_Temp   25 degrees C        ok 
+CPU2_DIMMA1_Temp   disabled            ns 
+CPU2_DIMMB1_Temp   disabled            ns 
+CPU2_DIMMC1_Temp   disabled            ns 
+CPU2_DIMMD1_Temp   disabled            ns 
+CPU2_DIMME1_Temp   disabled            ns 
+CPU2_DIMMF1_Temp   disabled            ns 
+CPU2_DIMMG1_Temp   disabled            ns 
+CPU2_DIMMH1_Temp   disabled            ns 
+CPU2_DIMMI1_Temp   disabled            ns 
+CPU2_DIMMJ1_Temp   disabled            ns 
+CPU2_DIMMK1_Temp   disabled            ns 
+CPU2_DIMML1_Temp   disabled            ns 
+Inlet Temp         25 degrees C        ok 
+Outlet1 Temp       25 degrees C        ok 
++VCORE0_CPU1       1.13 Volts          ok 
++VCORE1_CPU1       1.13 Volts          ok 
++VCORE0_CPU2       disabled            ns 
++VCORE1_CPU2       disabled            ns 
++VSOC_CPU1         0.89 Volts          ok 
++VSOC_CPU2         disabled            ns 
++VDDIO_CPU1        1.11 Volts          ok 
++VDDIO_CPU2        disabled            ns 
++12V               12.24 Volts         ok 
++5V                5.11 Volts          ok 
++3.3V              3.31 Volts          ok 
++5V_AUX            5.14 Volts          ok 
++3V_AUX            3.31 Volts          ok 
+VBAT               3.04 Volts          ok 
+SYS_FAN1_1         11340 RPM           ok 
+SYS_FAN2_1         24480 RPM           ok 
+SYS_FAN3_1         24480 RPM           ok 
+SYS_FAN4_1         24480 RPM           ok 
+SYS_FAN5_1         23940 RPM           ok 
+SYS_FAN6_1         11340 RPM           ok 
+SYS_FAN1_2         10800 RPM           ok 
+SYS_FAN2_2         22860 RPM           ok 
+SYS_FAN3_2         22860 RPM           ok 
+SYS_FAN4_2         22860 RPM           ok 
+SYS_FAN5_2         22860 RPM           ok 
+SYS_FAN6_2         10800 RPM           ok 
+PSU1 Power In      300 Watts           ok 
+PSU1 Power Out     252 Watts           ok 
+PSU2 Power In      276 Watts           ok 
+PSU2 Power Out     240 Watts           ok 
+CPU_Power          72 Watts            ok 
+Memory_Power       16 Watts            ok 
+
+Chassis Status
+==============
+System Power:         on
+Power Overload:       false
+Power Interlock:      inactive
+Main Power Fault:     false
+Power Control Fault:  false
+Power Restore Policy: always-on
+Last Power Event:     command
+Chassis Intrusion:    inactive
+Front-Panel Lockout:  inactive
+Drive Fault:          false
+Cooling/Fan Fault:    false
+
+System Event Log
+================
+Date        Time           Sensor                         Status                      Event
+----        ----           ------                         ------                      -----
+ 11/19/25   16:26:12 UTC   Version Change PCIE_Hardware   Hardware change detected    Asserted
+ 12/07/25   03:30:12 UTC   Power Unit PowerUnit           Power off/down              Deasserted
+ 12/07/25   03:34:30 UTC   Power Unit PowerUnit           Power off/down              Deasserted
+ 12/07/25   03:37:22 UTC   Version Change PCIE_Hardware   Hardware change detected    Asserted
+ 12/07/25   06:40:33 UTC   Power Unit PowerUnit           Power off/down              Deasserted
+ 12/07/25   06:43:23 UTC   Version Change PCIE_Hardware   Hardware change detected    Asserted
+ 12/17/25   11:13:50 UTC   Physical Security #0xfc        General Chassis intrusion   Asserted
+ 12/17/25   11:15:08 UTC   Version Change PCIE_Hardware   Hardware change detected    Asserted
+ 12/17/25   12:14:53 UTC   Power Unit PowerUnit           Power off/down              Deasserted
+ 12/17/25   12:19:06 UTC   Version Change PCIE_Hardware   Hardware change detected    Asserted
+ 12/17/25   13:41:24 UTC   Power Supply PSU1 AC Lost      Power Supply AC lost        Deasserted
+ 12/17/25   13:42:30 UTC   Power Unit PowerUnit           Power off/down              Deasserted
+ 12/17/25   13:45:22 UTC   Version Change PCIE_Hardware   Hardware change detected    Asserted
+ 01/04/26   06:02:31 UTC   Power Unit PowerUnit           Power off/down              Asserted
+ 01/04/26   06:02:36 UTC   Power Unit PowerUnit           Power off/down              Deasserted
+ 01/04/26   06:13:16 UTC   Power Unit PowerUnit           Power off/down              Asserted
+ 01/04/26   06:13:21 UTC   Power Unit PowerUnit           Power off/down              Deasserted
+ 01/04/26   06:16:15 UTC   Version Change PCIE_Hardware   Hardware change detected    Asserted
+ 01/20/26   05:29:30 UTC   Power Unit PowerUnit           Power off/down              Asserted
+ 02/26/26   08:45:47 UTC   Power Unit PowerUnit           Power off/down              Deasserted
+
+Kernel Log
+==========
+Entries
+-------
+[Apr16 13:10] audit: type=1400 audit(1776345057.643:174): apparmor="DENIED" operation="open" class="file" profile="ubuntu_pro_esm_cache_systemd_detect_virt" name="/sys/firmware/dmi/entries/0-0/raw" pid=173471 comm="systemd-detect-" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[Apr17 04:52] audit: type=1400 audit(1776401554.488:175): apparmor="DENIED" operation="open" class="file" profile="ubuntu_pro_esm_cache_systemd_detect_virt" name="/sys/firmware/dmi/entries/0-0/raw" pid=174801 comm="systemd-detect-" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[Apr19 03:56] audit: type=1400 audit(1776571008.076:176): apparmor="DENIED" operation="open" class="file" profile="ubuntu_pro_esm_cache_systemd_detect_virt" name="/sys/firmware/dmi/entries/0-0/raw" pid=178730 comm="systemd-detect-" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[Apr20 03:19] audit: type=1400 audit(1776655174.045:177): apparmor="DENIED" operation="open" class="file" profile="ubuntu_pro_esm_cache_systemd_detect_virt" name="/sys/firmware/dmi/entries/0-0/raw" pid=180830 comm="systemd-detect-" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[Apr21 16:07] audit: type=1400 audit(1776787621.792:178): apparmor="DENIED" operation="open" class="file" profile="ubuntu_pro_esm_cache_systemd_detect_virt" name="/sys/firmware/dmi/entries/0-0/raw" pid=184538 comm="systemd-detect-" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[Apr22 02:27] audit: type=1400 audit(1776824844.877:179): apparmor="DENIED" operation="open" class="file" profile="ubuntu_pro_esm_cache_systemd_detect_virt" name="/sys/firmware/dmi/entries/0-0/raw" pid=185443 comm="systemd-detect-" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[Apr23 13:18] audit: type=1400 audit(1776950311.213:180): apparmor="DENIED" operation="open" class="file" profile="ubuntu_pro_esm_cache_systemd_detect_virt" name="/sys/firmware/dmi/entries/0-0/raw" pid=189304 comm="systemd-detect-" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[Apr24 05:44] audit: type=1400 audit(1777009440.379:181): apparmor="DENIED" operation="open" class="file" profile="ubuntu_pro_esm_cache_systemd_detect_virt" name="/sys/firmware/dmi/entries/0-0/raw" pid=190718 comm="systemd-detect-" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[Apr25 05:16] audit: type=1400 audit(1777094169.627:182): apparmor="DENIED" operation="open" class="file" profile="ubuntu_pro_esm_cache_systemd_detect_virt" name="/sys/firmware/dmi/entries/0-0/raw" pid=192831 comm="systemd-detect-" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[Apr26 09:58] audit: type=1400 audit(1777197500.255:183): apparmor="DENIED" operation="open" class="file" profile="ubuntu_pro_esm_cache_systemd_detect_virt" name="/sys/firmware/dmi/entries/0-0/raw" pid=195618 comm="systemd-detect-" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[Apr27 05:39] audit: type=1400 audit(1777268390.260:184): apparmor="DENIED" operation="open" class="file" profile="ubuntu_pro_esm_cache_systemd_detect_virt" name="/sys/firmware/dmi/entries/0-0/raw" pid=198488 comm="systemd-detect-" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[Apr27 06:56] SGI XFS with ACLs, security attributes, realtime, quota, no debug enabled
+[  +0.002691] XFS (dm-2): Mounting V5 Filesystem e8a5653f-8633-4c94-b7d6-7a7a61bfc0c6
+[  +0.012865] XFS (dm-2): Ending clean mount
+[  +0.006668] xfs filesystem being mounted at /mnt/oldhome supports timestamps until 2038-01-19 (0x7fffffff)
+[Apr27 07:12] XFS (dm-2): Unmounting Filesystem e8a5653f-8633-4c94-b7d6-7a7a61bfc0c6
+[  +5.960817] XFS (dm-2): Mounting V5 Filesystem e8a5653f-8633-4c94-b7d6-7a7a61bfc0c6
+[  +0.012038] XFS (dm-2): Ending clean mount
+[  +0.006628] xfs filesystem being mounted at /mnt/oldhome supports timestamps until 2038-01-19 (0x7fffffff)
+[Apr27 11:14] audit: type=1400 audit(1777288481.809:185): apparmor="DENIED" operation="open" class="file" profile="ubuntu_pro_esm_cache_systemd_detect_virt" name="/sys/firmware/dmi/entries/0-0/raw" pid=259214 comm="systemd-detect-" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+   
+
+Insights
+========
+Recommendation                                   Justification
+--------------                                   -------------
+Consider enabling Intel Turbo Boost.             Intel Turbo Boost is not enabled.
+Consider upgrading to an Intel(r) Xeon(r) CPU.   The current CPU is not an Intel(r) Xeon(r) CPU.
+
+PerfSpect
+=========
+Version:   3.17.0_2026-04-20_956744c9
+Args:      ./perfspect report --format html,json,txt
+OutputDir: /mnt/oldhome/bjiang7/perfspect-run/perfspect/perfspect_2026-04-27_14-56-55
+
