@@ -4,6 +4,42 @@
 
 ---
 
+# 2026-04-27 — ZSTD 跨服务器对比 (srv-23-105 vs srv-23-11)
+
+在第二台服务器 `10.239.23.11` 上跑了和昨天 (105) 同一套 zstd matrix，做横向对比。
+
+## 第二台机环境
+- CPU: Intel Xeon 6979P, 480 逻辑线程
+- 内存: 754 GiB（测试时 ~408 GiB 已被其他进程占用，剩余 346 GiB 可用）
+- zstd: v1.5.1（注意：105 上是 1.5.5，1.5.x 之间解压器无重大变更，认为可比）
+- 工作目录: `/home/bjiang7/zstd-bench/`
+
+## 主要差异（节选，详见 comparison/2026-04-27-zstd-cross-server/）
+
+L19 单线程基线：
+
+| 指标                | srv-23-105 (EPYC 9965) | srv-23-11 (Xeon 6979P) |
+|---------------------|------------------------|-------------------------|
+| text.bin compress    |  5.19 MB/s             |  5.20 MB/s              |
+| text.bin decompress  |  1,951 MB/s            |  1,419 MB/s             |
+| random.bin decomp    | 24,377 MB/s            |  8,424 MB/s             |
+| zeros.bin  decomp    | 51,835 MB/s            | 12,552 MB/s             |
+
+L19 多线程压缩（text.bin）顶峰：105 在 T=32 ~103 MB/s；11 在 T=32 ~79 MB/s。两机都在 T=32 饱和，再加线程没收益。
+
+## 三个结论
+1. **高 level 单核压缩两机几乎一致** — 受算法 CPU 路径主导，IPC 差距体现不出来。
+2. **解压（cache/memcpy bound）EPYC 9965 全面领先 1.4×~4×** — 单核内存子系统更强。
+3. **想用满 100+ 核必须多文件并行** — 单文件 zstd 再加 -T 在 T=32 之后无效。
+
+## Caveats
+- text.bin 是 /usr 文本拼接 + 自重复，两机 seed 大小不同（93 MB vs 459 MB），所以 ratio 数字不直接可比（2.53 vs 4.55）。下次改用固定语料（silesia）。
+- L22 在 srv-23-105 上的 ratio=29.75 是 seed 重复 artifact；srv-23-11 上 ratio=5.31 才是更真实的数字。
+
+完整对比报告：`comparison/2026-04-27-zstd-cross-server/README.md`
+
+---
+
 # 2026-04-27 — ZSTD 压缩 / 解压性能基准测试
 
 ## 背景与目标
