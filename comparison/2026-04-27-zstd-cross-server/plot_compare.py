@@ -4,8 +4,8 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 SERVERS = {
-    'srv-23-105 (AMD EPYC 9965, 384T)': '/tmp/zstd-bench/results.csv',
-    'srv-23-11  (Intel Xeon 6979P, 480T)': '/tmp/zstd-bench-srv11/results.csv',
+    'EPYC 9965 (384T)': '/tmp/zstd-bench/results.csv',
+    'Xeon 6979P (480T)': '/tmp/zstd-bench-srv11/results.csv',
 }
 OUT = '/tmp/zstd-compare'
 import os; os.makedirs(OUT, exist_ok=True)
