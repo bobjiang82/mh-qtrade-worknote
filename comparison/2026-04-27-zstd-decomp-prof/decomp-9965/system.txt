@@ -1,0 +1,8 @@
+Model name:                           AMD EPYC 9965 192-Core Processor
+BIOS Model name:                      AMD EPYC 9965 192-Core Processor                Unknown CPU @ 2.2GHz
+Socket(s):                            1
+CPU(s) scaling MHz:                   67%
+CPU max MHz:                          2250.0000
+CPU min MHz:                          1500.0000
+NUMA node(s):                         1
+6.8.0-88-generic

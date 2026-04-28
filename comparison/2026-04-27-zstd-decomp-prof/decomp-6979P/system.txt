@@ -1,0 +1,8 @@
+Model name:                         Intel(R) Xeon(R) 6979P
+BIOS Model name:                    Intel(R) Xeon(R) 6979P
+Socket(s):                          2
+CPU(s) scaling MHz:                 22%
+CPU max MHz:                        3900.0000
+CPU min MHz:                        800.0000
+NUMA node(s):                       6
+6.6.0-gnr.bkc.6.6.37.1.51.x86_64

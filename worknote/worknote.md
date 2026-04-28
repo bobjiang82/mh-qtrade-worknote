@@ -4,6 +4,28 @@
 
 ---
 
+# 2026-04-27 — ZSTD 第四轮：解压 profiling — NUMA 绑定 + 真实频率/IPC/功耗
+
+第三轮把跨机解压差距收敛到 1% 以内（frame 字节对齐 + 1.5.7 同版本）。第四轮加两层观察：
+
+- **NUMA + 单核绑定**：`numactl --cpunodebind=0 --membind=0 taskset -c 0`，把进程钉到 cpu0 + node0。
+- **真实频率/IPC/功耗**：除了 Python 5ms 采 `scaling_cur_freq`，还跑 turbostat 取 APERF/MPERF 的 `Bzy_MHz` 和 `IPC`、整 socket 的 `PkgWatt`（governor 目标值会骗人，turbostat 才是真的）。
+
+只测解压，level=1/9/19/22，N=20。
+
+## 三个核心数字
+
+- **9965 解压全面快 33-41%**：silesia.tar 单核解压中位 L1=153ms / L9=164ms / L19=181ms / L22=217ms；6979P L1=259ms / L9=282ms / L19=308ms / L22=322ms。
+- **频率打平、IPC 拉开**：6979P 单核 turbo 跑满 3.9 GHz，9965 实测 3.66-3.69 GHz（被 BIOS 限到接近基频，离 5.0 GHz boost 标称差很远）。即便如此，9965 IPC 高 30-50%（3.4-3.7 vs 2.3-2.7）——zstd 解压是分支密集 + 顺序内存读，看起来更适配 Zen5 前端 + L2。
+- **NUMA pin 在 6979P 上反而更慢**：6979P 6 NUMA，单核绑定后解压 latency 普遍 +50%（L22: 208ms → 322ms）。9965 单 NUMA，无变化。多 NUMA 平台上"绑定 = 更纯净"是错觉。
+
+## 注意事项
+
+- 9965 的 turbostat 不报 `CoreTmp` 和 `RAMWatt`（AMD ESMI 默认未启用），只能拿到 `PkgWatt + Bzy_MHz + IPC`。
+- `PkgWatt` 是整 socket，6979P 数字含 127 个其他空闲核背景，不要直接对比绝对值。
+
+详见 `comparison/2026-04-27-zstd-decomp-prof/README.md`。
+
 # 2026-04-27 — ZSTD 第三轮：版本对齐 1.5.7 + 字节相同 reference frame + 延迟分布
 
 继续修订前两轮的结论。这一轮把可比性做到位：
