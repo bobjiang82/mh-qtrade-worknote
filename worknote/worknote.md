@@ -4,6 +4,37 @@
 
 ---
 
+# 2026-04-28 — ZSTD 第五轮：客户量化数据多线程 pipeline 解压 (字典 vs 无字典)
+
+模拟客户实际场景：行宽 203B (10 int64 + 15 double + 3 uint8)，5 行/block ≈ 1KB，多文件并行解压。三阶段 pipeline (Prefetcher → Decompressor → 隐式 merger)，BATCH=256 frames per queue item，per-thread `ZstdDecompressor` + 共享 `ZstdCompressionDict`。
+
+测试矩阵：F prefetch ∈ {1,3,6} × D decomp ∈ {F, 2F} × dict ∈ {no, yes} × cache ∈ {warm, cold} × pin ∈ {default, numa}（共 14 cell × 2 机）。数据集 6 文件 × 200 万 block ≈ 12 GB raw / 机。
+
+## 三个核心数字
+
+- **字典压缩比 +26%**：1KB block 上 no-dict 1.515x → dict (64 KB, 1 万样本训) 1.907x。客户传输成本立省 21%。
+- **6979P 多线程胜出**：F=3 D=3 dict warm，6979P 277 MB/s vs 9965 142 MB/s。9965 单线程更快 (246 vs 238 MB/s)，但多线程被 Ubuntu 24.04 自带 zstandard 0.22 老 binding 拖累；6979P 上 0.25 较新版 GIL 释放更细。
+- **NUMA interleave 在 6979P 上 +40%**：F=6 D=12 dict warm，default 107 → numactl --interleave=all 150 MB/s。多 NUMA Intel 平台上字典访问跨 node，interleave 才是正确姿势；与第四轮"single-node hard pin 反而慢"完全对应。
+
+## 实现要点
+
+- 文件格式：连续 `[u32 LE length][zstd frame]`，自描述 frame 边界，无需独立 index。
+- gen_quant_blocks.py 按字段语义生成（timestamp 单调+抖动 / sym_id randint / price cumsum 高斯 round 4 位 / qty lognormal round / flag 偏分布），保证可压性贴近真实。
+- 字典训练：`ZstdCompressor.train_dictionary(dict_size=65536, samples=10000)`，0.6s 训完，两机共用一份字典。
+- pipeline 关键：BATCH=256 入队，否则 1KB frame 的 queue 锁开销吃掉 GIL 释放收益。
+- cold cache：`echo 3 > /proc/sys/vm/drop_caches`。结果 cold/warm 差 ≤ 4%（NVMe + 4 MB sequential read 充分）。
+
+## 给客户的建议
+
+1. 1KB block 量化数据务必训字典：64 KB 字典 1 万样本即可，传输成本 -21%。
+2. Python 解压上限 ≈ 250 MB/s 单线程，多线程 scaling 差；生产用 C++ 可期待 3-5×。
+3. 多 NUMA Intel 平台一律 `numactl --interleave=all`，不要 single-node hard pin。
+4. 多文件并行 F=3..6 是最稳吞吐区间，再多 prefetch 受限于 Python queue 锁不再线性。
+
+详细：`comparison/2026-04-28-zstd-quant-pipeline/`
+
+---
+
 # 2026-04-28 — ZSTD 第四轮：解压 profiling — NUMA 绑定 + 真实频率/IPC/功耗
 
 第三轮把跨机解压差距收敛到 1% 以内（frame 字节对齐 + 1.5.7 同版本）。第四轮加两层观察：
