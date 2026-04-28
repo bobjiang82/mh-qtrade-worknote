@@ -1,0 +1,8 @@
+host=hpcserver zstd=*** Zstandard CLI (64-bit) v1.5.7, by Yann Collet *** input=/mnt/oldhome/bjiang7/silesia/silesia_shuf.tar N=20
+bd96ed2528b89e04c8fdf4927f5a0789f1bf5c6b6a20ac1b43f8a703b4f10b63  /mnt/oldhome/bjiang7/zstd157
+ebfcba3cc035681740f052be20226d751d10082beddbc8b4c9c1c2e02d334400  /mnt/oldhome/bjiang7/silesia/silesia_shuf.tar
+c1c3f2dea31db2e133bb22d22f7ae274a4ecd34f9d0fc7bd049fd1a1a9008ac0  /mnt/oldhome/bjiang7/ref-frames/silesia.l19.zst
+c575d10f7420f24cc7b11773e9f3e3eec4aea90e69953d8e1f1d8981f6337e52  /mnt/oldhome/bjiang7/ref-frames/silesia.l1.zst
+6a2ae211c84c91104540ab3d3e15f444e5121b6e90dc0a46c519ddfed5f1fba9  /mnt/oldhome/bjiang7/ref-frames/silesia.l22.zst
+e0474ef6c3eb2f731fae70949a1dc15707fcdf6eda57f0ba88668dda6f542ef0  /mnt/oldhome/bjiang7/ref-frames/silesia.l3.zst
+52325f5e356b12c6aecaea3cf8af4ba013026ac20d196bee0c350ab221de611e  /mnt/oldhome/bjiang7/ref-frames/silesia.l9.zst
