@@ -1,6 +1,6 @@
 # Round-4: zstd 解压 profiling — NUMA binding + 真实频率/IPC/功耗
 
-实验日期: 2026-04-27
+实验日期: 2026-04-28
 作用域: 单核解压, NUMA 绑定, turbostat 真实频率
 输入: silesia.tar 经 zstd 1.5.7 单线程压缩生成的 reference frames (跨机字节一致, sha256 校验通过, 详见 round-3)
 zstd 二进制: 1.5.7 (与 round-3 同一份, sha256=bd96ed25...)

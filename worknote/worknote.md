@@ -4,7 +4,7 @@
 
 ---
 
-# 2026-04-27 — ZSTD 第四轮：解压 profiling — NUMA 绑定 + 真实频率/IPC/功耗
+# 2026-04-28 — ZSTD 第四轮：解压 profiling — NUMA 绑定 + 真实频率/IPC/功耗
 
 第三轮把跨机解压差距收敛到 1% 以内（frame 字节对齐 + 1.5.7 同版本）。第四轮加两层观察：
 
@@ -24,7 +24,7 @@
 - 9965 的 turbostat 不报 `CoreTmp` 和 `RAMWatt`（AMD ESMI 默认未启用），只能拿到 `PkgWatt + Bzy_MHz + IPC`。
 - `PkgWatt` 是整 socket，6979P 数字含 127 个其他空闲核背景，不要直接对比绝对值。
 
-详见 `comparison/2026-04-27-zstd-decomp-prof/README.md`。
+详见 `comparison/2026-04-28-zstd-decomp-prof/README.md`。
 
 # 2026-04-27 — ZSTD 第三轮：版本对齐 1.5.7 + 字节相同 reference frame + 延迟分布
 
